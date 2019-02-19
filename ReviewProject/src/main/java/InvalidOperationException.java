@@ -15,7 +15,11 @@ public class InvalidOperationException extends RuntimeException {
                 super();
         }
 
-
+        /**
+         * Constructs a <code>InvalidOperationException</code>
+         * with message attached.
+         * @param message: Message to be displayed upon throwing exception
+         */
         public InvalidOperationException(String message) {
                 super( message );
         }
