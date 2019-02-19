@@ -96,16 +96,7 @@ public class PowerSetData {
                   }
         case 1 : {
                     List<List<Integer>> ans = PowerSet.powerSetImplementation2(myArray);
-
-                    for (List<Integer> item : ans) {
-                        System.out.print("[ ");
-                        for (Integer item2 : item) {
-                            System.out.print(item2 + " ");
-                    }
-                        System.out.print("]");
-
-
-                    }
+                    printResult(ans);
                     break;
         }
         case 2 : {
@@ -120,26 +111,30 @@ public class PowerSetData {
 
                         }
 
-
                             break;
                     }
         default:
-            List<List<Integer>> ans = PowerSet.powerSetImplementation2(myArray);
-
-                for (List<Integer> item : ans) {
-                System.out.print("[ ");
-                for (Integer item2 : item) {
-                    System.out.print(item2 + " ");
-                    }
-                        System.out.print("] ");
-
-                    }
-
-                    break;
-                }
+            		List<List<Integer>> ans = PowerSet.powerSetImplementation2(myArray);
+            		printResult(ans);
+            		break;
+            }
 
         }
+    
+    /**
+     * Prints out a List of integers for a power set
+     * @param List<List<Integer>> ans: A List of List<integers> for a powerset
+     */
+    private void printResult(List<List<Integer>> ans) {
+	    for (List<Integer> item : ans) {
+	        System.out.print("[ ");
+	        for (Integer item2 : item) {
+	            System.out.print(item2 + " ");
+	        }
+	        System.out.print("]");
+	    }
     }
+}
 
 
 
